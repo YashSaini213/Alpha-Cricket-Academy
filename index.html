@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logo.png">
     <style>
         :root {
             --primary-green: #1B5E20;
@@ -82,6 +83,12 @@
             gap: 10px;
             text-decoration: none;
             color: var(--white);
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
         }
 
         .logo-icon {
@@ -379,12 +386,21 @@
 
         .coach-image {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
+            height: 350px;
             background: linear-gradient(135deg, var(--secondary-green), var(--accent-green));
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .coach-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center center;
+            background: var(--white);
         }
 
         .coach-image i {
@@ -1079,8 +1095,8 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <i class="fas fa-cricket-batter-ball logo-icon"></i>
+<a href="#" class="logo">
+                <img src="logo.png" alt="Alpha Cricket Academy" class="logo-img">
                 <span class="logo-text">Alpha <span>Cricket</span></span>
             </a>
             <ul class="nav-menu" id="navMenu">
@@ -1123,7 +1139,7 @@
 
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1531415074968-b0742c63da1a?w=600&q=80" alt="Cricket Academy">
+                    <img src="Ground.png" alt="Cricket Academy">
                 </div>
                 <div class="about-content">
                     <h3>Our Vision</h3>
@@ -1156,17 +1172,7 @@
             <div class="coaches-grid">
                 <div class="coach-card">
                     <div class="coach-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="coach-info">
-                        <h4 class="coach-name">Arpit Katariya</h4>
-                        <p class="coach-role">Director</p>
-                        <p class="coach-exp">Former Ranji Trophy Player | 15+ Years Experience</p>
-                    </div>
-                </div>
-                <div class="coach-card">
-                    <div class="coach-image">
-                        <i class="fas fa-user"></i>
+                        <img src="YashwantPaliwal.jpeg" alt="Yashwant Paliwal">
                     </div>
                     <div class="coach-info">
                         <h4 class="coach-name">Yashwant Paliwal</h4>
@@ -1176,7 +1182,7 @@
                 </div>
                 <div class="coach-card">
                     <div class="coach-image">
-                        <i class="fas fa-user"></i>
+                        <img src="ChandrapalSingh.jpeg" alt="Chandrapal Singh">
                     </div>
                     <div class="coach-info">
                         <h4 class="coach-name">Chandrapal Singh</h4>
@@ -1184,26 +1190,28 @@
                         <p class="coach-exp">Certified Fast Bowling Specialist | 8+ Years Experience</p>
                     </div>
                 </div>
-                 <div class="coach-card">
+<div class="coach-card">
                     <div class="coach-image">
-                        <i class="fas fa-user"></i>
+                        <img src="Puneet Lohar.jpeg" alt="Puneet Lohar">
                     </div>
                     <div class="coach-info">
-                        <h4 class="coach-name">Chandrapal Singh</h4>
-                        <p class="coach-role">Head Coach</p>
-                        <p class="coach-exp">Certified Fast Bowling Specialist | 8+ Years Experience</p>
+                        <h4 class="coach-name">Puneet Lohar</h4>
+                        <p class="coach-role">Batting Coach</p>
+                        <p class="coach-exp">Special Batting Coach | 10 Year Playing Experience |
+Represented U-16, U-19,U-23 and Colvin Shield</p>
                     </div>
                 </div>
-                 <div class="coach-card">
+<div class="coach-card">
                     <div class="coach-image">
-                        <i class="fas fa-user"></i>
+                        <img src="Nitesh Sharma.jpeg" alt="Nitesh Sharma">
                     </div>
                     <div class="coach-info">
-                        <h4 class="coach-name">Chandrapal Singh</h4>
-                        <p class="coach-role">Head Coach</p>
-                        <p class="coach-exp">Certified Fast Bowling Specialist | 8+ Years Experience</p>
+                        <h4 class="coach-name">Nitesh Sharma</h4>
+                        <p class="coach-role"> Batting & Wicket-Keeping Coach</p>
+                        <p class="coach-exp">Professional Batting & Wicket-Keeping Coach | 5+ Years Coaching Experience | Rajasthan Royals Level 2 Qualified Coach | Played Pondicherry Premier League & Rajasthan Challenger Trophy</p>
                     </div>
                 </div>
+               
             </div>
         </div>
     </section>
@@ -1495,8 +1503,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="#" class="logo">
-                        <i class="fas fa-cricket-batter-ball logo-icon"></i>
+<a href="#" class="logo">
+                        <img src="logo.png" alt="Alpha Cricket Academy" class="logo-img">
                         <span class="logo-text">Alpha <span>Cricket</span></span>
                     </a>
                     <p>Alpha Cricket Academy is dedicated to nurturing cricket talent and shaping future champions through professional coaching and state-of-the-art facilities.</p>
