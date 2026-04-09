@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo.png">
+                <link rel="icon" type="image/png" href="logo2.jpeg">
     <style>
         :root {
             --primary-green: #FF6F00;
@@ -234,6 +234,33 @@
         .btn-outline:hover {
             background: var(--white);
             color: var(--primary-green);
+        }
+
+        .btn-docs {
+            background: linear-gradient(135deg, var(--secondary-green), var(--accent-green));
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-docs:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            color: var(--white);
+        }
+
+        .btn-docs i {
+            font-size: 18px;
         }
 
         .hero-buttons {
@@ -648,6 +675,107 @@
         .gallery-overlay i {
             color: var(--white);
             font-size: 30px;
+        }
+
+        /* Star Players Section */
+        .star-players {
+            background: var(--off-white);
+        }
+
+        .star-players-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .player-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            height: 400px;
+        }
+
+        .player-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .player-placeholder {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, var(--secondary-green), var(--accent-green));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.8);
+            font-size: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .player-placeholder i {
+            margin-bottom: 10px;
+        }
+
+        .player-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .player-card:hover .player-overlay {
+            opacity: 1;
+        }
+
+        .player-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .player-role {
+            font-size: 16px;
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .player-info {
+            padding: 20px;
+            background: var(--white);
+        }
+
+        .player-title {
+            font-size: 18px;
+            color: var(--dark-text);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .player-desc {
+            color: var(--light-text);
+            font-size: 14px;
+        }
+
+        /* Responsive for Star Players */
+        @media (max-width: 768px) {
+            .star-players-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Testimonials Section */
@@ -1096,15 +1224,17 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
 <a href="#" class="logo">
-                <img src="logo.png" alt="Alpha Cricket Academy" class="logo-img">
+                <img src="logo2.jpeg" alt="Alpha Cricket Academy" class="logo-img">
                 <span class="logo-text">Alpha <span>Cricket</span></span>
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#programs" class="nav-link">Programs</a></li>
+                <li><a href="#documents" class="nav-link">Brochure</a></li>
                 <li><a href="#facilities" class="nav-link">Facilities</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+<li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#star-players" class="nav-link">Star Players</a></li>
                 <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -1187,7 +1317,7 @@
                     <div class="coach-info">
                         <h4 class="coach-name">Chandrapal Singh</h4>
                         <p class="coach-role">Head Coach</p>
-                        <p class="coach-exp">Certified Fast Bowling Specialist | 8+ Years Experience</p>
+                        <p class="coach-exp">Indian cricketer who represents Rajasthan in domestic cricket. He made his List A debut in 2014 and first-class debut in 2020, and was also part of the Rajasthan Royals squad in the 2020 IPL as an emerging player.</p>
                     </div>
                 </div>
 <div class="coach-card">
@@ -1255,8 +1385,61 @@ Represented U-16, U-19,U-23 and Colvin Shield</p>
         </div>
     </section>
 
+    <!-- Summer Camp Section -->
+    <section class="summer-camp" id="summer-camp" style="background: var(--off-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Summer Special</span>
+                <h2 class="section-title">Summer Cricket Camp 2026</h2>
+                <p class="section-subtitle">Join our exciting summer program! Intensive cricket training, fun activities, and skill-building sessions for young champions ages 8-16.</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="summercamp-poster">
+                <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); width: 100%;">
+                    <img src="summercamp.jpeg" alt="Summer Cricket Camp 2026 Poster" 
+                         style="width: 100%; height: 500px; object-fit: contain; display: block;">
+                    <a href="Summer Camp 2026.pdf" class="btn-docs" target="_blank" rel="noopener" 
+                       style="position: absolute; bottom: 30px; right: 30px; background: linear-gradient(135deg, var(--secondary-green), var(--accent-green)); color: var(--white); padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: var(--shadow); z-index: 2;">
+                        <i class="fas fa-file-pdf"></i> Download Details
+                    </a>
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(transparent, rgba(0,0,0,0.5)); z-index: 1;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+
+    <section class="documents" id="documents">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Downloads</span>
+                <h2 class="section-title">Fees Structure & Brochure</h2>
+                <p class="section-subtitle">Access our academy brochure and detailed fee structures for all programs</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="Alpha Cricket Academy.pdf" class="btn btn-docs" target="_blank" rel="noopener">
+                    <i class="fas fa-file-pdf"></i>
+                    Brochure
+                </a>
+                <a href="Senior Candidates Fee Structure.pdf" class="btn btn-docs" target="_blank" rel="noopener">
+                    <i class="fas fa-file-pdf"></i>
+                    Senior candidate fees structure
+                </a>
+                <a href="Junior candidates Fee Structure.pdf" class="btn btn-docs" target="_blank" rel="noopener">
+                    <i class="fas fa-file-pdf"></i>
+                    Junior candidates fees structure
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Facilities Section -->
     <section class="facilities" id="facilities">
+
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Our Facilities</span>
@@ -1352,6 +1535,54 @@ Represented U-16, U-19,U-23 and Colvin Shield</p>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Star Players Section -->
+    <section class="star-players" id="star-players">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Star Players</span>
+                <h2 class="section-title">Our Star Players</h2>
+                <p class="section-subtitle">Meet our talented players who are making waves in cricket</p>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="star-players-grid">
+                <div class="player-card">
+                    <div class="player-placeholder">
+                        <img src="star1.jpeg" alt="Star Player 1" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="player-info">
+                        <h4 class="player-title">Yashaswi-Selected in U-23</h4>
+                       </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-placeholder">
+                        <img src="star2.jpeg" alt="Star Player 2" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="player-info">
+                        <h4 class="player-title">Akshita-Selected in U-23 </h4>
+                        </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-placeholder">
+                        <img src="star3.jpeg" alt="Star Player 3" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="player-info">
+                        <h4 class="player-title">Ramniwas Godala-Ranji Player</h4>
+                        </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-placeholder">
+                        <img src="star4.jpeg" alt="Star Player 4" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="player-info">
+                        <h4 class="player-title">Chirag Sharma-Ranji Player</h4>
+                       </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1510,7 +1741,7 @@ Represented U-16, U-19,U-23 and Colvin Shield</p>
             <div class="footer-grid">
                 <div class="footer-about">
 <a href="#" class="logo">
-                        <img src="logo.png" alt="Alpha Cricket Academy" class="logo-img">
+                        <img src="logo2.jpeg" alt="Alpha Cricket Academy" class="logo-img">
                         <span class="logo-text">Alpha <span>Cricket</span></span>
                     </a>
                     <p>Alpha Cricket Academy is dedicated to nurturing cricket talent and shaping future champions through professional coaching and state-of-the-art facilities.</p>
