@@ -1,2 +1,1 @@
-# Star Players Update Task\n\n## Steps:\n1. [x] Create TODO.md\n2. [x] Edit index.html: Remove Player 5 and Player 6 cards\n3. [ ] Edit index.html: Replace Player 1 placeholder with star1.jpeg\n4. [ ] Edit index.html: Replace Player 2 placeholder with star2.jpeg\n5. [ ] Edit index.html: Replace Player 3 placeholder with star3.jpeg\n6. [ ] Edit index.html: Replace Player 4 placeholder with star4.jpeg\n7. [ ] Verify changes and complete task
-
+1. [x] Create TODO.md with steps\n2. [x] Move Star Players section after About section\n3. [x] Verify navigation and layout\n4. [x] Mark complete and attempt_completion\n\nTask complete.
